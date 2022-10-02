@@ -1,0 +1,37 @@
+.nav {
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3em;
+
+    a {
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        //   color: $primary-color;
+      }
+    }
+  }
+}
+
+.nav {
+  width: max-content !important;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    li {
+      margin-right: 0;
+      a {
+        display: block !important;
+        padding: 15px 5px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<!-- <ui-banner></ui-banner> -->
+<carousel>
+    <ng-container *ngFor="let item of items">
+        <ng-container *carouselItem>
+            <div class="item">
+                <div>
+                    <span>{{item.text1}} </span><span>{{item.text2}}</span>
+                </div> <img [src]="item.img" alt="">
+            </div>
+        </ng-container>
+    </ng-container>
+</carousel>
+<products-categories-banner></products-categories-banner>
+<products-featured-products></products-featured-products>

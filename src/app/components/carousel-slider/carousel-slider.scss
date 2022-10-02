@@ -1,0 +1,123 @@
+@import "./breakpoints.scss";
+
+::ng-deep {
+  .item {
+    padding: 0;
+    width: 100vw !important;
+    height: 500px;
+    background-color: #f3f4f4;
+    color: #fff;
+    font-size: 50px;
+    line-height: 300px;
+    display: flex;
+    justify-content: space-around;
+
+    > div {
+      line-height: unset !important;
+      font-size: unset;
+      height: 250px;
+      margin-left: 4em;
+      span {
+        line-height: unset;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        color: #000;
+
+        &:first-child {
+          font-weight: 300;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 6000px;
+    }
+  }
+}
+
+:host {
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel__prev-button {
+  position: absolute;
+  left: 0 !important;
+  z-index: 2;
+  top: 30%;
+  cursor: pointer;
+  background-color: transparent !important;
+
+  i {
+    color: #000;
+  }
+}
+
+.carousel__next-button {
+  position: absolute;
+  right: 0 !important;
+  z-index: 2;
+  cursor: pointer;
+  top: 30%;
+  background-color: transparent !important;
+
+  i {
+    color: #000;
+  }
+}
+
+@mixin large-md-button {
+  mat-icon {
+    font-size: 50px;
+    width: unset;
+    height: unset;
+  }
+}
+
+@include bp-medium {
+  .carousel__prev-button {
+    height: 70px;
+    width: 70px;
+    left: unset;
+    right: 20vw;
+    bottom: 20px;
+
+    @include large-md-button();
+  }
+
+  .carousel__next-button {
+    height: 70px;
+    width: 70px;
+    right: 16vw;
+    bottom: 20px;
+
+    @include large-md-button();
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    > div {
+      height: unset;
+      margin-left: 0;
+    }
+    img {
+      display: none;
+    }
+  }
+  .carousel__prev-button,
+  .carousel__next-button {
+    top: 10%;
+  }
+}

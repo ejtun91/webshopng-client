@@ -1,0 +1,82 @@
+@import "../../../../style/colors.scss";
+
+.cart-page {
+  min-height: 500px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  .cart {
+    &-shipping {
+      color: var(--green-700);
+    }
+
+    &-item {
+      background-color: #fff;
+      border: 1px solid var(--surface-300);
+      border-radius: 15px;
+      padding: 15px;
+
+      &-img {
+        img {
+          height: 120px;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-name {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+      &-price {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        color: $primary-color;
+      }
+      &-quantity {
+        margin: 15px 0;
+      }
+      &-subtotal {
+        font-weight: 600;
+        &-value {
+          color: var(--green-700);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .cart-page {
+    .grid {
+      flex-direction: column;
+      .col-8 {
+        width: 100%;
+
+        .cart-item {
+          width: 80%;
+          margin: 0 auto;
+
+          .grid {
+            .col-3 {
+              width: 100%;
+            }
+          }
+
+          img {
+            max-width: unset;
+          }
+        }
+      }
+      .col-4 {
+        width: 100%;
+        .order-summary {
+          width: 90%;
+          margin: 0 auto;
+          padding: 0 0.5em;
+        }
+      }
+    }
+  }
+}

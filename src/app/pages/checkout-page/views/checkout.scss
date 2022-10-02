@@ -1,0 +1,49 @@
+@import "../../../../style/colors.scss";
+
+.checkout-page {
+  min-height: 500px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  button {
+    background-color: $primary-color;
+    border: 0;
+  }
+
+  .checkout {
+    &-form {
+      margin-top: 25px;
+    }
+
+    &-button {
+      margin-top: 20px;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .checkout-page {
+    .grid {
+      flex-direction: column;
+      .col-8 {
+        width: 100%;
+        form {
+          width: 80%;
+          margin: 0 auto;
+          .col-4 {
+            width: 100%;
+          }
+        }
+      }
+      .col-4 {
+        width: 100%;
+        .order-summary {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

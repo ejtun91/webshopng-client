@@ -1,0 +1,129 @@
+.banner {
+  height: 280px;
+  width: 100%;
+  background-color: #d7effb;
+  border-radius: 15px;
+
+  &-text {
+    color: var(--surface-700);
+    margin-top: 50px;
+
+    h1 {
+      margin: 0;
+      font-size: 3em;
+      font-weight: 400;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: 300;
+    }
+  }
+
+  &-image {
+    padding: 15px 0 0 0;
+    text-align: center;
+  }
+
+  &-button {
+    background-color: var(--surface-0);
+    //  color: $primary-color;
+    border: none;
+    border-radius: 13px;
+    height: 50px;
+
+    &:enabled:hover {
+      background-color: var(--surface-0);
+      //   color: $primary-color;
+      border: none;
+    }
+  }
+}
+
+.categories-banner {
+  margin-top: 75px;
+
+  h3 {
+    margin-bottom: 20px;
+    color: var(--surface-700);
+  }
+
+  .category {
+    min-height: 100px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--surface-700);
+    cursor: pointer;
+
+    &-icon {
+      .pi {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-name {
+      font-size: 1em;
+    }
+  }
+}
+
+.categories-banner {
+  width: 1300px;
+  display: flex;
+  margin: 0 auto;
+  gap: 2em;
+  padding: 5em 0;
+
+  .item-cat {
+    height: 172px;
+    width: 415px !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    line-height: unset !important;
+    background-size: cover;
+
+    span {
+      font-size: 1.4em;
+      display: block;
+      line-height: unset !important;
+      height: auto;
+      color: #000;
+      font-weight: 300;
+      margin-left: 1em;
+      margin-top: 2em;
+    }
+
+    a {
+      font-size: 0.8em;
+      display: block;
+      margin-left: 1.5em;
+      text-decoration: underline;
+      color: #b482ee;
+    }
+  }
+
+  .item1 {
+    background-image: url(/assets/img/h1-img-1.jpg);
+  }
+  .item2 {
+    background-image: url(/assets/img/h1-img-2.jpg);
+  }
+  .item3 {
+    background-image: url(/assets/img/h1-img-3.jpg);
+  }
+}
+@media (max-width: 768px) {
+  .categories-banner {
+    flex-direction: column;
+    .item-cat {
+    }
+  }
+}

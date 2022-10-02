@@ -1,0 +1,23 @@
+<header>
+    <div class="top-bar">
+        <div class="logo-container">
+            <div [routerLink]="['/']" routerLinkActive="router-link-active" class="logo">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+        </div>
+        <div class=" search">
+            <products-search></products-search>
+        </div>
+        <div class=" tools">
+            <!-- <i class="pi pi-user p-text-secondary" style="font-size: 1.4rem"></i> -->
+            <orders-cart-icon></orders-cart-icon>
+        </div>
+    </div>
+    <div [style.maxHeight]="open ? '500px' : '0'" class="bottom-bar">
+        <div class=" navigation">
+            <ngecomm-nav></ngecomm-nav>
+            <i (click)="openMenu()" class="pi pi-bars"></i>
+        </div>
+        <span>Call us toll free: <a href="tel:(+1)1312312">(+1)213123</a></span>
+    </div>
+</header>
