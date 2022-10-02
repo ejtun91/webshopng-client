@@ -7,7 +7,7 @@ import { UsersService } from './pages/login/services/users.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'webshop-client';
+  title = 'Webshop';
 
   constructor(private usersService: UsersService) {}
 
