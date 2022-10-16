@@ -24,7 +24,6 @@ export class ProductItemComponent implements OnInit {
       quantity: 1,
     };
     this.cartService.setCartItem(cartItem);
-    this.cartService.setCartItem(cartItem);
     this.messageService.add({
       severity: 'success',
       summary: 'Item Added',

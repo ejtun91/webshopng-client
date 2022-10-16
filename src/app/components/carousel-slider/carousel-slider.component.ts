@@ -20,6 +20,7 @@ import {
 
 import { CarouselItemDirective } from './carousel-item.directive';
 import { CarouselItemElementDirective } from './carousel-item-element.directive';
+import { interval } from 'rxjs';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -73,6 +74,9 @@ export class CarouselSliderComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.reSizeCarousel();
+    interval(3000).subscribe(() => {
+      this.next();
+    });
   }
 
   /**

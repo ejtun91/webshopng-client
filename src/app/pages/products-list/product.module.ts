@@ -35,6 +35,6 @@ const routes: Routes = [
   ],
   exports: [],
   declarations: [ProductsListComponent, ProductPageComponent],
-  providers: [MessageService],
+  providers: [],
 })
 export class ProductsModule {}
