@@ -58,7 +58,6 @@ export class CarouselSliderComponent implements AfterViewInit {
     // if (this.currentSlide + 1 === this.items.length) return;
     this.currentSlide = (this.currentSlide + 1) % this.items.length;
     this.transitionCarousel();
-    console.log(this.currentSlide);
   }
 
   /**

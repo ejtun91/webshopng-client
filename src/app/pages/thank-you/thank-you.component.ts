@@ -21,8 +21,6 @@ export class ThankYouComponent implements OnInit, OnDestroy {
       this.router.navigate(['/']);
     }
 
-    console.log(orderData);
-
     this.ordersService.createOrder(orderData).subscribe({
       complete: () => {
         this.cartService.emptyCart();
